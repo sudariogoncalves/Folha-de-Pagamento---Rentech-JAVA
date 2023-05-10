@@ -10,29 +10,29 @@ public class FuncoesSalario {
 						return true;
 						}
 	
-			 }public static boolean testaValorHora (double valorHora) {
-					if ((valorHora < 0) || (valorHora > 80)){ 
+			 }public static boolean testaValorHora (double valor) {
+					if ((valor < 0) || (valor > 80)){ 
 						return false;
 						} else {
 							return true;
 							}
 				
 						
-			}public static double calculaSalarioBruto(double horas, double valorHora) {
+			}public static double calculaSalarioBruto(double hora, double valor) {
 					
 					double salarioBruto = 0; 
-					if ((horas<=40) || (horas>160)){
-						salarioBruto = horas * valorHora;
+					if ((hora<=40) || (hora>160)){
+						salarioBruto = hora * valor;
 					   } else { 
 						
-						double horaExtra = horas - 40;
-						salarioBruto =((40 * valorHora) + (horaExtra*valorHora*1.5));
+						double horaExtra = hora - 40;
+						salarioBruto =((40 * valor) + (horaExtra*valor*1.5));
 					
 					   } return salarioBruto;
 					   
-			}public static double retornaHoraInferiorNormal(double qtdeHoras) {
+			}public static double retornaHoraInferiorNormal(double hora) {
 					   
-					  double  horaExtra = qtdeHoras- 40;
+					  double  horaExtra = hora- 40;
 						if (horaExtra <0) {
 							horaExtra = 0;
 						}
